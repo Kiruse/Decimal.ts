@@ -1,0 +1,27 @@
+{
+  "name": "@kiruse/decimal",
+  "version": "1.0.0",
+  "description": "Simple BigInt-based decimal for financial applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "bun test ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiruse/decimal.ts.git"
+  },
+  "keywords": [
+    "Decimal",
+    "financial",
+    "bigint"
+  ],
+  "author": "Kiruse",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kiruse/decimal.ts/issues"
+  },
+  "homepage": "https://github.com/kiruse/decimal.ts#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

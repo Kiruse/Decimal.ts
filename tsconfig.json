@@ -1,0 +1,11 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "CommonJS",
+    "allowJs": false,
+    "target": "es2020",
+    "declaration": true,
+    "sourceMap": true,
+  },
+  "include": ["index.ts"],
+}
