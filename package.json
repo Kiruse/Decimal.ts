@@ -1,9 +1,11 @@
 {
   "name": "@kiruse/decimal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple BigInt-based decimal for financial applications",
   "main": "index.js",
   "scripts": {
+    "prepare": "tsc",
+    "prepack": "tsc",
     "test": "bun test ./test.js"
   },
   "repository": {

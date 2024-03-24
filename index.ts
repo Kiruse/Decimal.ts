@@ -68,8 +68,9 @@ export class Decimal {
     if (int === 0n) {
       const leadingZeros = this.decimals - dec.toString().length;
       if (leadingZeros > 0) {
+        const sdec = dec.toString();
         if (leadingZeros > 3)
-          return `.0(${leadingZeros})${dec}`;
+          return `${sdec[0]}.${sdec.slice(1, 4)}e-${leadingZeros + 1}`;
         return `.${'0'.repeat(leadingZeros)}${dec}`;
       }
       return dec.toString();

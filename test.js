@@ -42,7 +42,7 @@ test('Decimal#to(Short)String', () => {
   expect(new Decimal(1234567890n, 0).toShortString()).toBe('1B');
   expect(new Decimal(1234567890000n, 0).toShortString()).toBe('1T');
   expect(new Decimal(123n, 6).toShortString()).toBe('.000123');
-  expect(new Decimal(123456n, 18).toShortString()).toBe('.0(12)123456');
+  expect(new Decimal(123456n, 18).toShortString()).toBe('1.234e-13');
 });
 
 test('Decimal to/fromJSON', () => {
