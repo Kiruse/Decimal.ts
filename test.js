@@ -1,5 +1,7 @@
 import { expect, test } from 'bun:test';
 import { Decimal } from './index';
+import { extendDefaultMarshaller } from '@kiruse/marshal';
+import { DecimalMarshalUnit } from './marshal';
 
 test('Decimal#constructor', () => {
   const d = new Decimal(123456789n, 6);
@@ -68,3 +70,9 @@ test('Decimal parse', () => {
   expect(Decimal.parse('10T').toString()).toBe('10000000000000');
 });
 
+test('Marshal Unit', () => {
+  const marshaller = extendDefaultMarshaller([DecimalMarshalUnit]);
+  const d = new Decimal(123456789n, 6);
+  expect(marshaller.marshal(d)).toBe('123.456789');
+  expect(marshaller.unmarshal('123.456789')).toEqual(d);
+});

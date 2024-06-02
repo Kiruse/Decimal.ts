@@ -1,8 +1,14 @@
 {
   "name": "@kiruse/decimal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple BigInt-based decimal for financial applications",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./ts": "./index.ts",
+    "./marshal": "./marshal.js",
+    "./ts/marshal": "./marshal.ts"
+  },
   "scripts": {
     "prepare": "tsc",
     "prepack": "tsc",
@@ -25,5 +31,8 @@
   "homepage": "https://github.com/kiruse/decimal.ts#readme",
   "devDependencies": {
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@kiruse/marshal": "^0.1.2-fix.1"
   }
 }
