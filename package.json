@@ -33,6 +33,6 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@kiruse/marshal": "^0.1.2-fix.1"
+    "@kiruse/marshal": "^0.2.0-rc.1"
   }
 }
