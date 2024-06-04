@@ -75,4 +75,6 @@ test('Marshal Unit', () => {
   const d = new Decimal(123456789n, 6);
   expect(marshaller.marshal(d)).toBe('123.456789');
   expect(marshaller.unmarshal('123.456789')).toEqual(d);
+  // anti-test: it should NOT override bigint
+  expect(marshaller.unmarshal('123456789')).toEqual(123456789n);
 });
