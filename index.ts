@@ -157,3 +157,6 @@ export class Decimal {
     return this.#decimals;
   }
 }
+
+//@ts-ignore
+if (typeof require === 'function') require('./inspectable')(Decimal);
