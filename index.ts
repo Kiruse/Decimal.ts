@@ -159,4 +159,4 @@ export class Decimal {
 }
 
 //@ts-ignore
-if (typeof process === 'undefined') require('./inspectable')(Decimal);
+if (typeof process !== 'undefined') require('./inspectable')(Decimal);
