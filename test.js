@@ -54,6 +54,12 @@ test('Decimal to/fromJSON', () => {
 });
 
 test('Decimal parse', () => {
+  const ref = new Decimal(123456789n, 6);
+  expect(Decimal.parse(ref)).toBe(ref);
+
+  expect(Decimal.parse(10n, 2).toString()).toBe('0.10');
+  expect(Decimal.parse(1000n, 2).toString()).toBe('10.00');
+
   expect(Decimal.parse(0.05).toString()).toBe('0.05');
   expect(Decimal.parse('0.05').toString()).toBe('0.05');
   expect(Decimal.parse('.0000005').toString()).toBe('0.0000005');
