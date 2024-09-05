@@ -1,6 +1,6 @@
 {
   "name": "@kiruse/decimal",
-  "version": "1.0.5",
+  "version": "1.0.5-fix.1",
   "description": "Simple BigInt-based decimal for financial applications",
   "main": "index.js",
   "exports": {

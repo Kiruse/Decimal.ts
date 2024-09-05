@@ -107,8 +107,8 @@ export class Decimal {
     return new Decimal(BigInt(value), decimals);
   }
 
-  static parse(value: bigint, decimals?: number): Decimal;
-  static parse(value: string | number | Decimal): Decimal;
+  static parse(value: bigint, decimals: number): Decimal;
+  static parse(value: string | number | bigint | Decimal): Decimal;
   static parse(value: bigint | string | number | Decimal, decimals?: number) {
     if (value instanceof Decimal) return value;
     if (typeof value === 'bigint') return new Decimal(value, decimals);
