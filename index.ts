@@ -59,7 +59,9 @@ export class Decimal {
   }
 
   toString() {
-    return this.decimals ? `${this.int}.${this.frac.toString().padStart(this.decimals, '0')}` : `${this.int}`;
+    let tmp = this.decimals ? `${this.int}.${this.frac.toString().padStart(this.decimals, '0')}` : `${this.int}`;
+    if (this.value < 0n) tmp = '-' + tmp;
+    return tmp;
   }
 
   toShortString() {
