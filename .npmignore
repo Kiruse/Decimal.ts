@@ -1,0 +1,7 @@
+.github/
+AGENTS.md
+*.ts
+!*.d.ts
+package-lock.json
+test.js
+tsconfig.json
